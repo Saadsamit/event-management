@@ -2,7 +2,7 @@
 function App() {
 
   return (
-    <div className='Mydiv'>
+    <div className='Mydiv font-openSans'>
       <h1
   className="font-extrabold textGradiend text-8xl"
 >
