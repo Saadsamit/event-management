@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h5,h6,a,button{
     @apply bg-gradient-to-br from-borderColor to-[#ff3e00]
 }
 .MyBtn{
-    @apply MyGradient hover:bg-gradient-to-tr transition-all
+    @apply MyGradient text-white hover:bg-gradient-to-tr hover:text-white transition-all
 }
 .textGradiend{
     @apply text-transparent bg-clip-text MyGradient

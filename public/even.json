@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "image": "https://i.ibb.co/qJx1Qrv/Game-Demos-and-Playable-Exhibits.png",
+        "title": "Game Demos and Playable Exhibits",
+        "description": "Offering attendees the chance to play demos of upcoming or newly released games is a central attraction. Conventions provide a wide range of games for hands-on experience.",
+        "price": 19
+    },
+    {
+        "id": "2",
+        "image": "https://i.ibb.co/02WnSW5/Developer-Panels-and-Q-A-Sessions.png",
+        "title": "Developer Panels and Q&A Sessions",
+        "description": "Gaming conventions often host panels and sessions where game developers and industry experts discuss game development, share insights, and answer questions from attendees.",
+        "price": 29
+    },
+    {
+        "id": "3",
+        "image": "https://i.ibb.co/GH5dKyr/Esports-Tournaments.png",
+        "title": "Esports Tournaments",
+        "description": " Many conventions feature competitive esports tournaments with professional and amateur players competing in popular games. These tournaments can have significant prize pools and attract a dedicated esports audience.",
+        "price": 14
+    },
+    {
+        "id": "4",
+        "image": "https://i.ibb.co/prR67fh/Tabletop-Gaming-Areas.png",
+        "title": "Tabletop Gaming Areas",
+        "description": "In addition to video games, conventions often provide areas for tabletop gaming, where attendees can play board games, card games, and role-playing games.",
+        "price": 9
+    },
+    {
+        "id": "5",
+        "image": "https://i.ibb.co/4fWvtBp/Arcade-and-Retro-Gaming-Zones.png",
+        "title": "Arcade and Retro Gaming Zones",
+        "description": "Dedicated areas with classic arcade games and retro consoles allow attendees to enjoy nostalgic gaming experiences.",
+        "price": 39
+    },
+    {
+        "id": "6",
+        "image": "https://i.ibb.co/1JCD826/Live-Streaming-and-Content-Creation-Studios.png",
+        "title": "Live Streaming and Content Creation Studios",
+        "description": "Some conventions provide spaces and equipment for content creators to livestream, record videos, and create content during the event.",
+        "price": 24
+    }
+]
