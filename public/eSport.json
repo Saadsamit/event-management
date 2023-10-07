@@ -1,0 +1,33 @@
+[
+    {
+        "id": "1",
+        "image": "https://i.ibb.co/ph4fTZX/Counter-Strike-Global-Offensive-CSGO.jpg",
+        "title": "Counter-Strike: Global Offensive (CS:GO)"
+
+    },
+    {
+        "id": "2",
+        "image": "https://i.ibb.co/JmFQPHL/Valorant.jpg",
+        "title": "Valorant"
+    },
+    {
+        "id": "3",
+        "image": "https://i.ibb.co/4d4qVTp/Overwatch.jpg",
+        "title": "Overwatch"
+    },
+    {
+        "id": "4",
+        "image": "https://i.ibb.co/MpkhDjc/Rainbow-Six-Siege.jpg",
+        "title": "Rainbow Six Siege"
+    },
+    {
+        "id": "5",
+        "image": "https://i.ibb.co/vXhKnkr/Call-of-Duty-Warzone.jpg",
+        "title": "Call of Duty: Warzone"
+    },
+    {
+        "id": "6",
+        "image": "https://i.ibb.co/M1w0wfT/League-of-Legends.jpg",
+        "title": " League of Legends"
+    }
+]

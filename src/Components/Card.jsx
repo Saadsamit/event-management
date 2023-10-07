@@ -5,7 +5,7 @@ const Card = ({data}) => {
     const {id, image, title, description, price} = data
 
   return (
-    <Link to={`/even/${id}`} className="card bg-base-100 border border-borderColor">
+    <div className="card bg-base-100 border border-borderColor">
       <figure className='max-h-[250px]'>
         <img
           src={image}
@@ -17,14 +17,14 @@ const Card = ({data}) => {
         <p className='text-paraColor'>{description.length < 100 ? description : `${description.slice(0,80)}...`}</p>
         <p className='text-borderColor text-4xl'>$<span className='text-[#ff3e00]'>{price}</span></p>
         <div className="card-actions">
-          <button className="btn MyBtn w-full">join Now</button>
+          <Link to={`/even/${id}`}><button className="btn MyBtn w-full">see detail</button></Link>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 
 Card.propTypes = {
-    data: PropTypes.array.isRequired
+  data: PropTypes.object.isRequired
 }
 export default Card;
