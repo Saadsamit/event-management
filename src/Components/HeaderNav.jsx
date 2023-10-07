@@ -1,13 +1,14 @@
+import logo from "../../public/img/logo.png"
 import { Link, NavLink } from "react-router-dom";
 
 const HeaderNav = () => {
   const links = ["home", "about", "blog"];
   const MyNav = links.map((link, idx) => (
-    <li key={idx}>
+    <li key={idx} className="m-2">
       <NavLink
         to={link === "home" ? "/" : `/${link}`}
         className={({ isActive, isPending }) =>
-          isPending ? "pending" : isActive ? "MyBtn" : ""
+          isPending ? "pending" : isActive ? "text-white hover:text-white MyGradient" : "hover:text-white hover:MyGradient"
         }
       >
         {link}
@@ -42,7 +43,7 @@ const HeaderNav = () => {
               {MyNav}
             </ul>
           </div>
-          <img src="./img/logo.png" alt="" className="w-40" />
+          <img src={logo} alt="" className="w-40" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-white">{MyNav}</ul>
