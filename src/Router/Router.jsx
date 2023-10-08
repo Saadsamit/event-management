@@ -5,6 +5,7 @@ import ErorPage from "../Pages/ErorPage";
 import EventDetail from "../Pages/eventDetail";
 import Login from "../Pages/Login";
 import Registration from "../Pages/Registration";
+import PriveteRouer from "./priveteRouer";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/even/:id",
-        element: <EventDetail />,
+        element: <PriveteRouer><EventDetail /></PriveteRouer>,
       },
       {
         path: "/login",
