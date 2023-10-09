@@ -1,11 +1,15 @@
 import { PropTypes } from 'prop-types';
 import { Link } from 'react-router-dom';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const Card = ({data}) => {
     const {id, image, title, description, price} = data
-
+    useEffect(() => {
+      AOS.init();
+    }, [])
   return (
-    <div className="card bg-base-100 border border-borderColor">
+    <div className="card bg-base-100 border border-borderColor" data-aos="fade-up">
       <figure className='max-h-[250px]'>
         <img
           src={image}

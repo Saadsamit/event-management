@@ -6,6 +6,8 @@ import EventDetail from "../Pages/eventDetail";
 import Login from "../Pages/Login";
 import Registration from "../Pages/Registration";
 import PriveteRouer from "./priveteRouer";
+import Schedule from "../Pages/Schedule";
+import Contact from "../Pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+      },
+      {
+        path: "/schedule",
+        element: <PriveteRouer><Schedule /></PriveteRouer>,
+      },
+      {
+        path: "/contact",
+        element: <PriveteRouer><Contact /></PriveteRouer>,
       },
       {
         path: "/even/:id",

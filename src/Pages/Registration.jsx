@@ -5,9 +5,15 @@ import { context } from "../Mycontext";
 import { updateProfile } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Registration = () => {
   const navigate = useNavigate();
   const { registrar } = useContext(context);
+  useEffect(() => {
+    AOS.init();
+  }, [])
   const haldleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -19,10 +25,10 @@ const Registration = () => {
       toast.error("Password must be at least 6 characters");
       return;
     }else if(!/[A-Z]/.test(password)){
-      toast.error("don't have a capital letter");
+      toast.error("Password must be at least 1 capital letter");
       return;
     }else if(!/[!\@\#\$\%\^\&\*\)\(\+\=\.\_\-]/.test(password)){
-      toast.error("don't have a special character");
+      toast.error("Password must be at least 1 special character");
       return;
     }else{
       registrar(email, password)
@@ -50,7 +56,7 @@ const Registration = () => {
   return (
     <div style={MybgStyle} className="hero min-h-screen">
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content flex-col">
+      <div className="hero-content flex-col" data-aos="zoom-in">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold text-white pt-20">
             Registrar now!

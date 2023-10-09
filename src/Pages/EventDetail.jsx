@@ -1,16 +1,14 @@
 import Banner2 from "./../Components/Banner2";
-import { Link, useOutletContext, useParams } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import { Link, useNavigate, useOutletContext, useParams } from "react-router-dom";
   import 'react-toastify/dist/ReactToastify.css';
 const EventDetail = () => {
     const evenData = useOutletContext()
+    const navigate = useNavigate()
     const {id} = useParams()
     const findObj = evenData.find((data)=> data.id == id)
     const {image, title, description, price} = findObj
     const notify = ()=>{
-        toast.success(`you pay $${price} for booking`, {
-            position: toast.POSITION.TOP_CENTER
-          })
+          navigate("/schedule")
     }
   return (
     <div>
@@ -29,7 +27,6 @@ const EventDetail = () => {
       <div className="text-center pt-7">
       <Link to="/" className="btn MyBtn text-center">go back to hone</Link>
       </div>
-      <ToastContainer />
     </div>
   );
 };

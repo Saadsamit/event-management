@@ -4,9 +4,15 @@ import BannerBg from "../../public/img/banner2.jpg";
 import { useContext } from "react";
 import { context } from "../Mycontext";
 import toast from "react-hot-toast";
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const Login = () => {
   const location = useLocation()
   const navigate = useNavigate();
+  useEffect(() => {
+    AOS.init();
+  }, [])
   const { SignUpWithGoogle, LogIn } = useContext(context);
   const haldleSubmit = (e) => {
     e.preventDefault();
@@ -31,7 +37,7 @@ const Login = () => {
     SignUpWithGoogle()
       .then(() => {
         toast.success("logged successfull");
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => console.error(error));
   };
@@ -43,7 +49,7 @@ const Login = () => {
   return (
     <div style={MybgStyle} className="hero min-h-screen">
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content flex-col">
+      <div className="hero-content flex-col" data-aos="zoom-in">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold text-white pt-28">Login now!</h1>
         </div>

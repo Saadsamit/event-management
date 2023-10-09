@@ -6,10 +6,9 @@ import { CgProfile } from 'react-icons/cg';
 const HeaderNav = () => {
   const { user,logOut } = useContext(context);
   const [toggle,setToggle] = useState(false) 
-  // console.log(user.photoURL, user.displayName, user.email);
-  const links = ["home", "about", "blog"];
+  const links = ["home", "schedule", "contact"];
   const MyNav = links.map((link, idx) => (
-    <li key={idx} className="m-2">
+    <li key={idx} className="m-2 capitalize">
       <NavLink
         to={link === "home" ? "/" : `/${link}`}
         className={({ isActive, isPending }) =>
@@ -72,7 +71,10 @@ const HeaderNav = () => {
               className="menu menu-sm right-0 space-y-2 absolute mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <h3 className="text-center py-2 text-xl bg-base-200 hover:bg-slate-300 rounded-xl">{user.displayName}</h3>
-              <button className="btn MyBtn border-none" onClick={logOut}>
+              <button className="btn MyBtn border-none" onClick={()=>{
+                logOut()
+                setToggle(false)
+                }}>
               logout
             </button>
             </ul>

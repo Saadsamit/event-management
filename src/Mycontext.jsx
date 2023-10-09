@@ -9,6 +9,7 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+import toast from "react-hot-toast";
 
 export const context = createContext(null);
 export const Mycontext = ({ children }) => {
@@ -29,7 +30,10 @@ export const Mycontext = ({ children }) => {
   };
   const logOut = () => {
     setIsLoading(true)
-    signOut(auth);
+    signOut(auth)
+    .then(
+      toast.success("logout successfull")
+    )
   };
   useEffect(() => {
     onAuthStateChanged(auth, (currentUser) => {
